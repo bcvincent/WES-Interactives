@@ -1,0 +1,208 @@
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  height:750px;
+}
+
+p{
+  padding-bottom:5px;
+}
+select {
+  font-size:18px;
+}
+.main{
+  width:300px;
+  margin:0;
+}
+.boxes {
+  width:100%;
+  position:relative;
+}
+
+.box{
+  display:inline-block;
+  border: solid 1px grey;
+  width:200px;
+  height: 200px;
+  margin:10px auto;
+  /* box-sizing: border-box; */
+  display:flex;
+  position:absolute;
+  left: 0;
+  right: 0;
+  transition: all 2s ease;
+
+ }
+
+ .box-multiplied{
+  top:20px;
+ }
+
+ .leftbox-home{
+  top:20px;
+
+ }
+ .rightbox-home{
+  top:230px;
+ }
+
+#multibox{
+  top:20px;
+  flex-wrap: wrap;
+  border-width:2px ;
+}
+.multibox-home{}
+
+
+ #leftbox{
+ }
+
+#rightbox{
+  flex-direction:column;
+  
+}
+
+.bit{
+  border: 2px solid grey;
+  flex: 1 100%;
+  box-sizing:border-box;
+  /* background-color:red; */
+
+
+}
+
+.col{
+  border:solid 1px grey;
+  /* width:11%; */
+  flex: 1 100%;
+}
+
+.col-selected{
+  background-color:rgba(255, 174, 214, 0.5);
+}
+
+.row{
+  border:solid 1px grey;
+  width:100%;
+  flex: 1 100%;
+}
+
+.row-selected{
+  background-color:rgba(100, 160, 230, 0.5);
+}
+
+/* CONTROLS */
+
+.controls{
+  height:100%;
+  text-align:center;
+  display:flex;
+}
+
+.fracbox{
+  padding:10px;
+  margin:5px;
+  flex:1;
+}
+
+#left-frac{
+  border: solid 1px grey;
+  background-color:rgba(255, 174, 214, 0.5);
+
+}
+#right-frac{
+  border: solid 1px grey;
+  background-color:rgba(100, 160, 230, 0.5);
+
+}
+
+#multi{
+  display:flex;
+}
+
+#multi a{
+  flex: 1;
+  margin:10px;
+  text-align:center;
+}
+
+.btn{
+  text-decoration: none;
+  background-color:#007DA5;
+  padding:10px;
+  color:rgb(240, 240, 240);
+}
+
+#multiplybtn{
+}
+
+.faded{
+  opacity:0.8;
+}
+
+.highlighted{
+  background-color:rgba(128, 0, 128, 0.8);
+}
+
+/* Diff number of cols */
+.col1{
+  flex-basis:100%;
+}
+.col2{
+  flex-basis:50%;
+}
+.col3{
+  flex-basis:33%;
+}
+.col4{
+  flex-basis:25%;
+}
+.col5{
+  flex-basis:20%;
+}
+.col6{
+  flex-basis:16.6%;
+}
+.col7{
+  flex-basis:14.2%;
+}
+.col8{
+  flex-basis:12.5%;
+}
+.col9{
+  flex-basis:11%;
+}
+
+.centered{
+  text-align:center;
+}
+
+#showyourwork{
+  font-size:18px;
+  margin-top:5px;
+}
+
+@media (min-width:600px){
+  .main{
+    width:600px;
+  }
+  .box{
+    margin:10px 0 10px 0;
+  }
+  #rightbox{
+    right:0;
+    left: 320px;
+    top: 20px;
+  }
+  #leftbox{
+    left:80px;
+  }
+  .box-multiplied, #multibox{
+    top: 20px !important;
+    left: 200px !important;
+  }
+
+}
