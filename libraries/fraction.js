@@ -75,22 +75,25 @@ function changeRows(numberOfRows, numNum){
 
 $("#resetbtn").click(resetAll);
 function resetAll() {
-  $("#multibox").fadeOut(500);
-  $(".bit").fadeOut(500);
-  $("#rightbox").removeClass("faded box-multiplied");
-  $("#rightbox").addClass("rightbox-home");
-  $("#leftbox").removeClass("faded box-multiplied");
-  $("#leftbox").addClass("leftbox-home");
-  $("#showyourwork").html("<p></p>");
+  $("#multibox").fadeOut(1000);
+  $(".bit").fadeOut(1000);
+  setTimeout(function() {
+    $("#rightbox").delay(5000).removeClass("faded box-multiplied");
+    $("#rightbox").delay(1000).addClass("rightbox-home");
+    $("#leftbox").delay(1000).removeClass("faded box-multiplied");
+    $("#leftbox").delay(1000).addClass("leftbox-home");
+    $("#showyourwork").html("<p></p>");
+  }, 1200);
+  
 }
 
 function theBigOne() {
   var numOfBits = $("#left-frac-denom").val() * $("#right-frac-denom").val();
 
-  for(var j = 1; j<=numOfBits; j++){
-    var newbit = $( " <div class='bit' id='bit"+j+"'></div>" );
-    $( "#multibox" ).append(newbit);
-  }
+  // for(var j = 1; j<=numOfBits; j++){
+  //   var newbit = $( " <div class='bit' id='bit"+j+"'>5</div>" );
+  //   $( "#multibox" ).append(newbit);
+  // }
 
   createMultiBox();
 
@@ -113,9 +116,9 @@ $( "#multiplybtn" ).click(function(){
   theBigOne();
   $("#leftbox").removeClass("leftbox-home").addClass("box-multiplied faded");
   $("#rightbox").removeClass("rightbox-home").addClass("box-multiplied faded");
-  $("#multibox").hide().delay(1500).fadeIn(1500);
-  $(".bit").hide().delay(1000).fadeIn(1500);
-  $("#showyourwork").hide().html("<p>"+numOfCols+"/"+numOfTotalCols+" x " + numOfRows+"/"+numOfTotalRows+" = " + newNum+ "/"+newDen+"</p>").fadeIn(1500);
+  $("#multibox").hide().delay(2500).fadeIn(1000);
+  $(".bit").hide().delay(2000).fadeIn(1000);
+  $("#showyourwork").hide().html("<p>"+numOfCols+"/"+numOfTotalCols+" x " + numOfRows+"/"+numOfTotalRows+" = " + newNum+ "/"+newDen+"</p>").delay(1500).fadeIn(1000);
 });
 
 

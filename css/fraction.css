@@ -19,14 +19,15 @@ select {
 }
 .boxes {
   width:100%;
+  height:270px;
   position:relative;
 }
 
 .box{
   display:inline-block;
   border: solid 1px grey;
-  width:200px;
-  height: 200px;
+  width:250px;
+  height: 250px;
   margin:10px auto;
   /* box-sizing: border-box; */
   display:flex;
@@ -38,21 +39,22 @@ select {
  }
 
  .box-multiplied{
-  top:20px;
+  top:0px;
  }
 
  .leftbox-home{
-  top:20px;
+  top:0px;
 
  }
  .rightbox-home{
-  top:230px;
+  top:260px;
  }
 
 #multibox{
-  top:20px;
+  top:0px;
   flex-wrap: wrap;
   border-width:2px ;
+  background-color:rgba(255, 255, 255, 0.65);
 }
 .multibox-home{}
 
@@ -66,7 +68,7 @@ select {
 }
 
 .bit{
-  border: 2px solid grey;
+  border: 3px solid rgba(128, 0, 128, 1);
   flex: 1 100%;
   box-sizing:border-box;
   /* background-color:red; */
@@ -121,6 +123,8 @@ select {
 
 #multi{
   display:flex;
+  flex-direction:column;
+  flex:2;
 }
 
 #multi a{
@@ -132,7 +136,7 @@ select {
 .btn{
   text-decoration: none;
   background-color:#007DA5;
-  padding:10px;
+  padding:15px;
   color:rgb(240, 240, 240);
 }
 
@@ -195,14 +199,14 @@ select {
   #rightbox{
     right:0;
     left: 320px;
-    top: 20px;
+    top: 0px;
   }
   #leftbox{
-    left:80px;
+    left:30px;
   }
   .box-multiplied, #multibox{
-    top: 20px !important;
-    left: 200px !important;
+    top: 0px !important;
+    left: 175px !important;
   }
 
 }
