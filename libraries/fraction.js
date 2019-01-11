@@ -106,9 +106,8 @@ function theBigOne() {
   if($("#leftbox").hasClass("leftbox-home")){
     $("#showyourwork").hide();
   }
-  $("#showyourwork").html("<p>"+numOfCols+"/"+numOfTotalCols+" x " + numOfRows+"/"+numOfTotalRows+" = " + newNum+ "/"+newDen+"</p>");
-
-
+  $("#showyourwork").html("<div class='answer'><span class='fraction'><span class='top'>"+numOfCols+"</span><span class='symbols'></span><span class='bottom'>"+numOfTotalCols+"</span></span><span class='fraction'>X</span><span class='fraction'><span class='top'>"+numOfRows+"</span><span class='symbols'></span><span class='bottom'>"+numOfTotalRows+"</span></span><span class='fraction'>=</span><span class='fraction'><span class='top top-answer'>"+newNum+"</span><span class='symbols'></span><span class='bottom bottom-answer'>"+newDen+"</span></span></div>");
+ 
 }
 
 $( "#multiplybtn" ).click(function(){
@@ -118,7 +117,9 @@ $( "#multiplybtn" ).click(function(){
   $("#rightbox").removeClass("rightbox-home").addClass("box-multiplied faded");
   $("#multibox").hide().delay(2500).fadeIn(1000);
   $(".bit").hide().delay(2000).fadeIn(1000);
-  $("#showyourwork").hide().html("<p>"+numOfCols+"/"+numOfTotalCols+" x " + numOfRows+"/"+numOfTotalRows+" = " + newNum+ "/"+newDen+"</p>").delay(1500).fadeIn(1000);
+  
+
+  $("#showyourwork").hide().html("<div class='answer'><span class='fraction'><span class='top'>"+numOfCols+"</span><span class='symbols'></span><span class='bottom'>"+numOfTotalCols+"</span></span><span class='fraction'>X</span><span class='fraction'><span class='top'>"+numOfRows+"</span><span class='symbols'></span><span class='bottom'>"+numOfTotalRows+"</span></span><span class='fraction'>=</span><span class='fraction'><span class='top top-answer'>"+newNum+"</span><span class='symbols'></span><span class='bottom bottom-answer'>"+newDen+"</span></span></div>").delay(1500).fadeIn(1000);
 });
 
 
@@ -153,5 +154,5 @@ function createMultiBox(){
   }
 }
 
-createMultiBox();
 
+createMultiBox();

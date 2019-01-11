@@ -68,13 +68,11 @@ select {
 }
 
 .bit{
-  border: 3px solid rgba(128, 0, 128, 1);
+  border: 3px solid darkgreen;
   flex: 1 100%;
   box-sizing:border-box;
-  /* background-color:red; */
-
-
 }
+
 
 .col{
   border:solid 1px grey;
@@ -186,8 +184,66 @@ select {
 
 #showyourwork{
   font-size:18px;
-  margin-top:5px;
 }
+
+/* FRACTION STYLING  */
+/* answer is 5 boxes wide.  fraction, X, fraction, =, answer */
+/* each fraction is 3 boxes tall.  numerator, symbol, denom */
+
+
+.answer, .fraction{
+  display:flex;
+}
+
+.answer{
+  justify-content:center;
+}
+
+
+
+.top-answer{
+  background-color:rgba(128, 0, 128, 0.8);
+  padding:10px !important;
+}
+
+.bottom-answer{
+  background-color:darkgreen;
+  padding:10px !important;
+
+  /* border-top:3px solid #000 !important; */
+}
+
+.symbols{
+  border-top:solid 2px black;
+  margin:5px 0;
+}
+
+
+.top-answer, .bottom-answer{
+  display:block;
+  color:white;
+  border-radius:5px;
+}
+
+.fraction, .top, .bottom {
+  padding: 10px;    
+}
+
+.fraction {
+  flex-direction:column;
+  text-align: center;   
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bottom{
+  /* border-top: 1px solid #000; */
+  display: block;
+}
+
+/* MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY  */
+/* MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY  */
+/* MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY  */
 
 @media (min-width:600px){
   .main{
