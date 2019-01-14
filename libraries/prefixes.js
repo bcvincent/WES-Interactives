@@ -1,12 +1,12 @@
-// var leftheight = 2.44; //meters, shipping container
-var leftheight = [0.00244, 0.0244, 0.244, 2.44, 24.4, 244, 2440];
+// var leftheight = 2.5; //meters, shipping container
+var leftheight = [0.0025, 0.025, 0.25, 2.5, 25.0, 250, 2500];
 var rightheight = [0.03, 0.3, 3, 30, 300, 3000, 30000]; //meters, crane
 
-var leftweight = [0.0181, 0.181, 1.81, 18.1, 181, 1810, 18100]; //kg, pallet
-var rightweight = [4.08233, 40.8233, 408.233, 4082.33, 40823.3, 408233, 4082330]; //kg, forklift
+var leftweight = [0.018, 0.18, 1.8, 18.0, 180, 1800, 18000]; //kg, pallet
+var rightweight = [4.08, 40.8, 408, 4080, 40800, 408000, 4080000]; //kg, forklift
 
 var leftvolume = [0.00095, 0.0095, 0.095, 0.95, 9.5, 95, 950]; //liters, quart of oil
-var rightvolume = [0.2082, 2.082, 20.82, 208.2, 2082, 20820, 208200]; //liters shipping drum
+var rightvolume = [0.208, 2.08, 20.8, 208, 2080, 20800, 208000]; //liters shipping drum
 
 var height = leftheight; //initially, all lefts
 var weight = leftweight;
@@ -20,10 +20,17 @@ function initialize(){
   $('section#height .readout').html("<p>"+height[3]+" meters</p>");
   $('section#weight .readout').html("<p>"+weight[3]+" grams</p>");
   $('section#volume .readout').html("<p>"+volume[3]+" liters</p>");
+
+  $("#volume").hide();
+  $("#weight").hide();
 }
 initialize();
 
+
+
+
 $( ".choices a" ).click(function(){
+    event.preventDefault();
   if($(this).hasClass("left-choice")){
      activeElement = "left";   
      inactiveElement = "right"; 
@@ -64,3 +71,36 @@ function updateReadout(){
     $('section#'+sectionID+' .options select').attr('name')+
     "</p>");
 }
+
+
+$(".nav").click(function(){
+  $("#main").children().hide();
+
+  var sectionName = $(this).data('id');
+  console.log(sectionName);
+  $("#"+sectionName).show();
+  
+});
+
+// $(".next").click(function(){
+
+//   event.preventDefault();
+//   var $ancestor = $(this).parent().parent();
+//   var $next = $ancestor.next();
+//   $ancestor.hide();
+//   if($next.length == 0){
+//     $next = $ancestor.siblings().first();
+//   }
+//     $next.show();  
+// });
+
+// $(".prev").click(function(){
+//   event.preventDefault();
+//   var $ancestor = $(this).parent().parent();
+//   var $prev = $ancestor.prev();
+//   $ancestor.hide();
+//   if($prev.length == 0){
+//     $prev = $ancestor.siblings().last();
+//   }
+//     $prev.show();  
+// });
