@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/prefixes.css">
+
+  <title>Prefixes</title>
+</head>
+<body>
+  <div id="main">
+    <section id="height" >
+      <div class="title" >
+        <h3>Height</h3>
+      </div>
+      <div class="choices" >
+        <a class="left-choice active" href="#"></a>
+        <a class="right-choice" href="#"></a>
+      </div>
+      <div class="image">
+        <img class="left-image" src="" alt="">
+        <img class="right-image hidden" src="" alt="">
+      </div>
+      <div class="readout">
+        <p>2.4</p>
+      </div>
+      <div class="options">
+        <select  name="meters" id="heightselect">
+          <option value="0">kilo</option>
+          <option value="1">hecto</option>
+          <option value="2">deka</option>
+          <option value="3" selected></option>
+          <option value="4">deci</option>
+          <option value="5">centi</option>
+          <option value="6">milli</option>
+        </select>
+
+      </div>
+    </section>
+    <section id="volume" >
+        <div class="title" >
+          <h3>Volume</h3>
+        </div>
+        <div class="choices" >
+            <a class="left-choice active" href="#"></a>
+            <a class="right-choice" href="#"></a>
+        </div>
+        <div class="image">
+          <img class="left-image" src="" alt="">
+          <img class="right-image hidden" src="" alt="">
+
+        </div>
+        <div class="readout">
+          <p>2.4</p>
+        </div>
+        <div class="options">
+          <select name="liters" id="volumeselect">
+            <option value="0">kilo</option>
+            <option value="1">hecto</option>
+            <option value="2">deka</option>
+            <option value="3" selected></option>
+            <option value="4">deci</option>
+            <option value="5">centi</option>
+            <option value="6">milli</option>
+          </select>
+
+        </div>
+      </section>
+      <section id="weight" >
+          <div class="title" >
+            <h3>Weight</h3>
+          </div>
+          <div class="choices" >
+              <a class="left-choice active" href="#"></a>
+              <a class="right-choice" href="#"></a>
+          </div>
+          <div class="image">
+            <img class="left-image" src="" alt="">
+            <img class="right-image hidden" src="g" alt="">
+
+          </div>
+          <div class="readout">
+            <p>2.4</p>
+          </div>
+          <div class="options">
+            <select  name="grams" id="weightselect">
+              <option value="0">kilo</option>
+              <option value="1">hecto</option>
+              <option value="2">deka</option>
+              <option value="3" selected></option>
+              <option value="4">deci</option>
+              <option value="5">centi</option>
+              <option value="6">milli</option>
+            </select>
+          </div>
+        </section>
+
+  </div>
+    <script src="libraries/jquery-3.3.1.min.js"></script>
+    <script src="libraries/prefixes-manufacturing.js"></script>  <!-- this determines the values, items, and images -->
+    <script src="libraries/prefixes.js"></script>
+</body>
+</html>

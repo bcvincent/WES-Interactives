@@ -1,12 +1,12 @@
-// var leftheight = 2.5; //meters, shipping container
-var leftheight = [0.0025, 0.025, 0.25, 2.5, 25.0, 250, 2500];
-var rightheight = [0.03, 0.3, 3, 30, 300, 3000, 30000]; //meters, crane
+// // var leftheight = 2.5; //meters, shipping container
+// var leftheight = [0.0025, 0.025, 0.25, 2.5, 25.0, 250, 2500];
+// var rightheight = [0.03, 0.3, 3, 30, 300, 3000, 30000]; //meters, crane
 
-var leftweight = [0.018, 0.18, 1.8, 18.0, 180, 1800, 18000]; //kg, pallet
-var rightweight = [4.08, 40.8, 408, 4080, 40800, 408000, 4080000]; //kg, forklift
+// var leftweight = [0.018, 0.18, 1.8, 18.0, 180, 1800, 18000]; //kg, pallet
+// var rightweight = [4.08, 40.8, 408, 4080, 40800, 408000, 4080000]; //kg, forklift
 
-var leftvolume = [0.00095, 0.0095, 0.095, 0.95, 9.5, 95, 950]; //liters, quart of oil
-var rightvolume = [0.208, 2.08, 20.8, 208, 2080, 20800, 208000]; //liters shipping drum
+// var leftvolume = [0.00095, 0.0095, 0.095, 0.95, 9.5, 95, 950]; //liters, quart of oil
+// var rightvolume = [0.208, 2.08, 20.8, 208, 2080, 20800, 208000]; //liters shipping drum
 var height = leftheight; //initially, all lefts
 var weight = leftweight;
 var volume = leftvolume;
