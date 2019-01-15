@@ -10,22 +10,25 @@ var newDen = numOfTotalCols * numOfTotalRows;
 
 // Changing Numerators
 function changeLeftNum() {
+  checkReset();
   var leftfracnumval = $("#left-frac-numer").val();
   $(".col").removeClass("col-selected").slice( 0,leftfracnumval  ).addClass( "col-selected" );
-  theBigOne();
+  //theBigOne();
 }
 $( "#left-frac-numer" ).change(changeLeftNum);
 
 function changeRightNum() {
+  checkReset();
   var rightfracnumval = $("#right-frac-numer").val();
   $(".row").removeClass("row-selected").slice( 0,rightfracnumval  ).addClass( "row-selected" );
-  theBigOne();
+  // theBigOne();
 }
 $( "#right-frac-numer" ).change(changeRightNum);
 
 
 // Changing Denominators
 $( "#left-frac-denom" ).change(function() {
+  checkReset();
   var leftfracnumval = $("#left-frac-numer").val();
   $( "#leftbox" ).html('');  //clear out everything from left/top box
   $( "#left-frac-numer" ).html('');
@@ -38,6 +41,7 @@ $( "#left-frac-denom" ).change(function() {
 });
 
 $( "#right-frac-denom" ).change(function() {
+  checkReset();
   var rightfracnumval = $("#right-frac-numer").val();
   $( "#rightbox" ).html(''); //clear out everything from right/bottom box
   $( "#right-frac-numer" ).html('');
@@ -73,17 +77,23 @@ function changeRows(numberOfRows, numNum){
   createMultiBox();
 }
 
+function checkReset(){
+  if($("#rightbox").hasClass("box-multiplied")){
+    resetAll();
+  }
+}
+
 $("#resetbtn").click(resetAll);
 function resetAll() {
-  $("#multibox").fadeOut(1000);
-  $(".bit").fadeOut(1000);
-  setTimeout(function() {
-    $("#rightbox").delay(5000).removeClass("faded box-multiplied");
-    $("#rightbox").delay(1000).addClass("rightbox-home");
-    $("#leftbox").delay(1000).removeClass("faded box-multiplied");
-    $("#leftbox").delay(1000).addClass("leftbox-home");
+  $("#multibox").fadeOut(200);
+  $(".bit").fadeOut(200);
+  // setTimeout(function() {
+    $("#rightbox").delay(200).removeClass("faded box-multiplied");
+    $("#rightbox").delay(200).addClass("rightbox-home");
+    $("#leftbox").delay(200).removeClass("faded box-multiplied");
+    $("#leftbox").delay(200).addClass("leftbox-home");
     $("#showyourwork").html("<p></p>");
-  }, 1200);
+  // }, 200);
   
 }
 

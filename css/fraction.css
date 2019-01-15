@@ -68,7 +68,7 @@ select {
 }
 
 .bit{
-  border: 3px solid darkgreen;
+  border: 3px solid #007DA5;
   flex: 1 100%;
   box-sizing:border-box;
 }
@@ -100,12 +100,13 @@ select {
   height:100%;
   text-align:center;
   display:flex;
+  justify-content: space-around;
 }
 
 .fracbox{
   padding:10px;
   margin:5px;
-  flex:1;
+  flex:0.4;
 }
 
 #left-frac{
@@ -127,8 +128,9 @@ select {
 
 #multi a{
   flex: 1;
-  margin:10px;
+  margin:5px auto;
   text-align:center;
+  width:30%;
 }
 
 .btn{
@@ -207,7 +209,7 @@ select {
 }
 
 .bottom-answer{
-  background-color:darkgreen;
+  background-color:#007DA5;
   padding:10px !important;
 
   /* border-top:3px solid #000 !important; */
