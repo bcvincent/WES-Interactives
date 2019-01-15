@@ -29,7 +29,6 @@ section{
 a{
   text-decoration:none;
   color:#eee;
-  font-size:13px;
 }
 
 .choices a:first-child{
@@ -39,12 +38,10 @@ a{
 
 #main{
   width:100%;
-  max-width:300px;
+  max-width:900px;
   margin:0;
   background-color:#efefef;
   display:flex;
-  flex-direction:column;
-
   justify-content: space-between;
 }
 
@@ -63,50 +60,10 @@ section{
   background-color:lightgreen;
 } */
 
-.title{
-  display:flex;
-  justify-content: space-around;
-  align-items:center;
-  border-bottom:dashed 1px rgb(199, 199, 199);
-  padding-bottom:10px;
-}
 
-.title h3{
-  color:#00d2d2;
-  border-right:solid 1px #eee;
-  border-left:solid 1px #eee;
-  padding:0 20px;
-
-}
-
-.title, .readout{
+.title, .choices, .readout{
   margin:5px 0;
   text-align:center;
-}
-
-.choices{
-  margin: 10px 0 5px 0;
-  text-align:center;
-
-}
-
-/* hide, intiially */
-#volume{
-  display:none;
-}
-#weight{
-  display:none;
-}
-
-.nav{
-  font-size:14px;
-  flex:1;
-}
-
-.weight-nav{
-  border-left:solid 1px #eee;
-  border-right: solid 1px #eee;
-  padding: 0 10px;
 }
 
 .readout{
@@ -139,11 +96,11 @@ section{
   color:#00d2d2;
   pointer-events: none;
   cursor: default;
-  font-size:16px;
 }
 
 
 @media (max-width:600px){
   #main{
     width:75%;
-}
+    flex-direction:column;
+} 

@@ -7,7 +7,6 @@ var rightweight = [4.08, 40.8, 408, 4080, 40800, 408000, 4080000]; //kg, forklif
 
 var leftvolume = [0.00095, 0.0095, 0.095, 0.95, 9.5, 95, 950]; //liters, quart of oil
 var rightvolume = [0.208, 2.08, 20.8, 208, 2080, 20800, 208000]; //liters shipping drum
-
 var height = leftheight; //initially, all lefts
 var weight = leftweight;
 var volume = leftvolume;
@@ -20,17 +19,10 @@ function initialize(){
   $('section#height .readout').html("<p>"+height[3]+" meters</p>");
   $('section#weight .readout').html("<p>"+weight[3]+" grams</p>");
   $('section#volume .readout').html("<p>"+volume[3]+" liters</p>");
-
-  $("#volume").hide();
-  $("#weight").hide();
 }
 initialize();
 
-
-
-
 $( ".choices a" ).click(function(){
-    event.preventDefault();
   if($(this).hasClass("left-choice")){
      activeElement = "left";   
      inactiveElement = "right"; 
@@ -49,9 +41,9 @@ $( ".choices a" ).click(function(){
   // images
   $(this).parent().siblings('.image').children('.'+activeElement+'-image').removeClass("hidden");
   $(this).parent().siblings('.image').children('.'+inactiveElement+'-image').addClass("hidden");
-  
+
   updateReadout();
-  
+
 });
 
 $(".options select").change(function(){
@@ -70,37 +62,4 @@ function updateReadout(){
     $('section#'+sectionID+' .options select option:selected').text()+
     $('section#'+sectionID+' .options select').attr('name')+
     "</p>");
-}
-
-
-$(".nav").click(function(){
-  $("#main").children().hide();
-
-  var sectionName = $(this).data('id');
-  console.log(sectionName);
-  $("#"+sectionName).show();
-  
-});
-
-// $(".next").click(function(){
-
-//   event.preventDefault();
-//   var $ancestor = $(this).parent().parent();
-//   var $next = $ancestor.next();
-//   $ancestor.hide();
-//   if($next.length == 0){
-//     $next = $ancestor.siblings().first();
-//   }
-//     $next.show();  
-// });
-
-// $(".prev").click(function(){
-//   event.preventDefault();
-//   var $ancestor = $(this).parent().parent();
-//   var $prev = $ancestor.prev();
-//   $ancestor.hide();
-//   if($prev.length == 0){
-//     $prev = $ancestor.siblings().last();
-//   }
-//     $prev.show();  
-// });
+} 
