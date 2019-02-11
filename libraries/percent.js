@@ -20,13 +20,14 @@ createRowBox();
 
 $slider = $("#myRange");
 $output = $("#demo");
-$(".readout").html("<h3>"+$slider.val()+"%</h3>");
+$("#percent").html("<h3>"+$slider.val()+"%</h3>");
+$("#decimal").html("<h3>"+($slider.val()/100).toFixed(2)+"</h3>");
+$("#fraction").html("<h3>"+$slider.val()+"/100</h3>");
 
 
 
 $slider.on("input change", function() {   
   var currentPercent = $slider.val();
-  console.log($slider.val());
   for(var j = 1; j<=100; j++){
     if(j<=currentPercent){
       $( "#bit"+j ).addClass("active");
@@ -39,8 +40,9 @@ $slider.on("input change", function() {
 
     }
   } 
-  $(".readout").html("<h3>"+currentPercent+"%</h3>");
-
+  $("#percent").html("<h3>"+$slider.val()+"%</h3>");
+  $("#decimal").html("<h3>"+($slider.val()/100).toFixed(2)+"</h3>");
+  $("#fraction").html("<h3>"+$slider.val()+"/100</h3>");
 });
 
 

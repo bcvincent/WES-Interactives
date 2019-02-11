@@ -20,7 +20,7 @@ h3{
 }
 .main{
   width:300px;
-  margin:0;
+  margin:20px;
 }
 #multibox{  flex-wrap: wrap;
 }
@@ -37,6 +37,10 @@ h3{
   flex-basis:10%;
 }
 
+.readout{
+  display:flex;
+  justify-content: space-around;
+}
 
 .box{
   display:inline-block;
