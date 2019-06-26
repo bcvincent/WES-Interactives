@@ -7,18 +7,25 @@
 
 // var leftvolume = [0.00095, 0.0095, 0.095, 0.95, 9.5, 95, 950]; //liters, quart of oil
 // var rightvolume = [0.208, 2.08, 20.8, 208, 2080, 20800, 208000]; //liters shipping drum
-var height = leftheight; //initially, all lefts
-var weight = leftweight;
-var volume = leftvolume;
+//initially, all lefts
+
+var height; 
+var weight;
+var volume; 
+
+(typeof leftheight !== 'undefined') ?  height = leftheight :  height = null; 
+(typeof leftweight !== 'undefined') ?  weight = leftweight :  weight = null; 
+(typeof leftvolume !== 'undefined') ?  volume = leftvolume :  volume = null; 
 
 var sectionID;
 var activeElement;
 var inactiveElement;
 
 function initialize(){
-  $('section#height .readout').html("<p>"+height[3]+" meters</p>");
-  $('section#weight .readout').html("<p>"+weight[3]+" grams</p>");
-  $('section#volume .readout').html("<p>"+volume[3]+" liters</p>");
+  ;
+  if(height) updateReadout("height");
+  if(weight) updateReadout("weight"); 
+  if(volume) updateReadout("volume");
 }
 initialize();
 
@@ -42,16 +49,16 @@ $( ".choices a" ).click(function(){
   $(this).parent().siblings('.image').children('.'+activeElement+'-image').removeClass("hidden");
   $(this).parent().siblings('.image').children('.'+inactiveElement+'-image').addClass("hidden");
 
-  updateReadout();
+  updateReadout(sectionID);
 
 });
 
 $(".options select").change(function(){
   sectionID = $(this).parent().parent().attr('id'); //update what section we're in based on select click
-  updateReadout();
+  updateReadout(sectionID);
 });
 
-function updateReadout(){
+function updateReadout(sectionID){
   var readoutVal = window[sectionID][$('section#'+sectionID+' .options select').val()];
   //pulling predetermined values from array, not calculating, to make sure we use the exact decimals we want 
 

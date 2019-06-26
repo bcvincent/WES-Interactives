@@ -1,0 +1,6 @@
+.choices a:first-child{
+  /* override prefixes.css */
+  border-right:none;
+  padding-right:0;
+  color:var(--highlight-color);
+}
